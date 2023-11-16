@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         text = (TextView) findViewById(R.id.textView);
         editText = (EditText) findViewById(R.id.editTextView);
+        text.setText(read());
     }
     /**
      *This method is called when the save button is clicked
@@ -57,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public void Exit(View view) {
         write(editText.getText().toString());
-        text.setText(read());
         finish();
     }
 
